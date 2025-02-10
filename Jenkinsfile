@@ -11,10 +11,10 @@ pipeline {
           //      sh 'make'
             //}
         //}
-        //stage('Execute Program') {
-          //  steps {
-            //    sh './output'
-            //}
-        //}
+        stage('Execute Program') {
+            steps {
+                sh './output.exe'
+            }
+        }
     }
 }
