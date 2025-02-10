@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "C:\\MinGW\\bin;${env.PATH}"
+    }
     stages {
         stage('Clone Repository') {
             steps {
