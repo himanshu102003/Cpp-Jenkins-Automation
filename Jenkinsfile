@@ -6,14 +6,18 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/himanshu102003/Cpp-Jenkins-Automation.git'
             }
         }
-        //stage('Build') {
-        //    steps {
-          //      sh 'make'
-            //}
-        //}
+        stage('Build') {
+            steps {
+                echo 'Buildling... 
+              sh 'make'
+                echo 'Building done....'
+            }
+        }
         stage('Execute Program') {
             steps {
+                echo 'executing...'
                 sh './output.exe'
+                echo 'executing done...'
             }
         }
     }
